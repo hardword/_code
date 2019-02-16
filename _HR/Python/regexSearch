@@ -1,0 +1,15 @@
+#!/bin/python
+
+#Validating phone numbers
+
+import re
+
+n = int(raw_input())
+
+for _ in xrange(n):
+    s = raw_input()
+    match = re.search(r'^[789][0-9]{9}$', s)
+    if match:
+        print 'YES'
+    else:
+        print 'NO'
